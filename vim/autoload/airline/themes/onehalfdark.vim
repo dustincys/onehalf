@@ -56,7 +56,7 @@ let s:insert_inner = [s:blue_g, s:med_lo_g, s:blue_c, s:med_lo_c]
 let g:airline#themes#onehalfdark#palette.insert = 
     \ airline#themes#generate_color_map(s:insert_outer, s:insert_middle, s:insert_inner)
 let g:airline#themes#onehalfdark#palette.insert_modified = 
-    \ copy(g:airline#themes#onehalfdark#palette.normal_modified)
+    \ airline#themes#generate_color_map(s:insert_outer, s:insert_middle, s:normal_inner_modified)
 
 
 " Replace mode
@@ -66,7 +66,7 @@ let s:replace_inner = [s:red_g, s:med_lo_g, s:red_c, s:med_lo_c]
 let g:airline#themes#onehalfdark#palette.replace =
     \ airline#themes#generate_color_map(s:replace_outer, s:replace_middle, s:replace_inner)
 let g:airline#themes#onehalfdark#palette.replace_modified = 
-    \ copy(g:airline#themes#onehalfdark#palette.insert_modified)
+    \ airline#themes#generate_color_map(s:replace_outer, s:replace_middle, s:normal_inner_modified)
 
 
 " Visual mode
@@ -76,7 +76,7 @@ let s:visual_inner = [s:yellow_g, s:med_lo_g, s:yellow_c, s:med_lo_c]
 let g:airline#themes#onehalfdark#palette.visual = 
     \ airline#themes#generate_color_map(s:visual_outer, s:visual_middle, s:visual_inner)
 let g:airline#themes#onehalfdark#palette.visual_modified = 
-    \ copy(g:airline#themes#onehalfdark#palette.insert_modified)
+    \ airline#themes#generate_color_map(s:visual_outer, s:visual_middle, s:normal_inner_modified)
 
 
 " Inactive window
